@@ -1,0 +1,17 @@
+---
+title: "FYP Project for Poly"
+lightbox: true
+---
+
+When I was in polytechnic, I had to design an investment app with my teammates.
+
+This app would allow users to insert money and invest in stocks or assets.
+It was rough deciding what was necessary and what we felt was needed, but
+you can see the results of our efforts below. I enjoyed the project
+quite a bit.
+It would eloquently display and 
+![Investments](/images/sample1){group="my-gallery"}
+
+![Personal](/images/sample2){group="my-gallery"}
+
+![Home](/images/sample3){group="my-gallery"}

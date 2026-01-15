@@ -2,20 +2,27 @@ project:
   type: website
   output-dir: docs
 website:
-  title: "temp_web"
+  title: "My Website"
+  favicon: /images/logo.png
   navbar:
+    logo: /images/logo.png
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-
+      - href: FYP Project.qmd
+        text: FYP
+      - href: Data Visualisation.qmd
+        text: Data Visualisation
+      - href: Wonton Mee Recipe.qmd
+        text: Recipes
+      - href: Reflection.qmd
+        text: Reflection
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
     toc: true
-
+    toc-depth: 3
+    toc-location: left
 
 

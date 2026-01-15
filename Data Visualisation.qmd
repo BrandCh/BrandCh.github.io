@@ -1,0 +1,52 @@
+---
+title: "Data Visualisation"
+format: html
+execute:
+  echo: false
+---
+Using data from the [NCD](https://ncdrisc.org/data-downloads-height.html), I had
+show the growth of Singaporean young adults (aged 18) over time.
+I had decided not to combine the heights of both genders as I realised from
+initial plotting that there was a big gap between males and females.
+
+From the data, I had discovered that due to improving nutrition availability, 
+youth height steadily increased over time. 
+
+I used a line graph to display the height changes over time. Since the 1990s,
+heights have been steadily improving for both genders, with other sources and
+research, I concluded that it was due to improving dietary conditions for youths.
+```{r message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+df <- read_csv("NCD_RisC_Lancet_2020_height_child_adolescent_country.csv")
+
+show_sex  <- "Both"      # "Boys", "Girls", or "Both"
+age_18_id <- "18"        # CHANGE if your dataset labels it differently
+# ----------------------
+
+df_sg <- df %>%
+  filter(
+    Country == "Singapore",
+    `Age group` == age_18_id
+  ) %>%
+  {
+    if (show_sex == "Both") .
+    else filter(., Sex == show_sex)
+  }
+
+ggplot(df_sg, aes(x = Year, y = `Mean height`, color = Sex)) +
+  geom_line(linewidth = 1) +
+  geom_point() +
+  labs(
+    title = "Mean Height Over Time in Singapore (Age 18)",
+    subtitle = paste("Sex:", show_sex),
+    x = "Year",
+    y = "Mean Height (cm)",
+    color = "Sex"
+  ) +
+  theme_minimal()
+
+
+```

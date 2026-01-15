@@ -1,0 +1,14 @@
+---
+title: "Reflection on the use of GenAI"
+format: html
+---
+
+While I did not use genai for this assignment, I have used it in my free time on
+personal projects. 
+
+I normally use [chatgpt](https://chatgpt.com/) as my genai. Though other genai
+are stronger, I find the level of responses that chatgpt are sufficient and I
+did not need to go further.
+There aren't many challenges to the use genai other than good prompts.
+I do believe that genai is the future for helping with code, I still feel that
+handwritten code tends to be better.
